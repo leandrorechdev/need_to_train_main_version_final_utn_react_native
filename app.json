@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "NeedToTrain-expo",
+    "slug": "NeedToTrain-expo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo_main.png",
+    "scheme": "needtotrainexpo",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/expo.icon"
+    },
+    "android": {
+      "package": "com.leandrorechdev.needtotrain", // Defino un ID único para Google Play
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/logo_dumbell_across_letters.png",
+        "backgroundImage": "./assets/images/logo_main.png",
+        "monochromeImage": "./assets/images/logo_dumbell_across_letters"
+      },
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize" // Esto asegura que el teclado no tape nuestro contenido
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "android": {
+            "image": "./assets/images/logo_dumbell_across_letters",
+            "imageWidth": 76
+          }
+        }
+      ],
+      "expo-status-bar",
+      "expo-localization",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
