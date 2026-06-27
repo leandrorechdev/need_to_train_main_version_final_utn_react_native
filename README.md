@@ -6,13 +6,13 @@
 
 - **Planificación Semanal:** Interfaz intuitiva basada en días de la semana para organizar tu progreso.
 - **Gestión Multimodal:**
-  - **Gym:** Formulario específico para registrar series y repeticiones.
-  - **Runner:** Registro de distancia y duración de carrera.
-  - **YouTube:** Integración con videos de entrenamiento mediante búsqueda personalizada.
+    - **Gym:** Formulario específico para registrar series y repeticiones.
+    - **Runner:** Registro de distancia y duración de carrera.
+    - **YouTube:** Integración con videos de entrenamiento mediante búsqueda personalizada.
 - **Experiencia Dinámica:**
-  - **Multilenguaje:** Soporte completo para Inglés y Español con cambio en tiempo real.
-  - **Modo Visual:** Soporte nativo para modo oscuro/claro persistido en el dispositivo.
-  - **UI Fluida:** Navegación optimizada mediante *Tabs*, *Drawer* y *Modales flotantes*.
+    - **Multilenguaje:** Soporte completo para Inglés y Español con cambio en tiempo real.
+    - **Modo Visual:** Soporte nativo para modo oscuro/claro persistido en el dispositivo.
+    - **UI Fluida:** Navegación optimizada mediante _Tabs_, _Drawer_ y _Modales flotantes_.
 - **Backend:** Sincronización en tiempo real con **Firebase Firestore**.
 
 ## 📂 Estructura del Proyecto
@@ -22,30 +22,33 @@ La arquitectura sigue el estándar de `expo-router` con una separación clara en
 ```text
 
 src/
-├── app/                     # Rutas y vistas principales
-│   ├── (drawer)/            # Layout con menú lateral
-│   ├── (tabs)/              # Navegación inferior (Home, Calendario)
-│   │   ├── calendar/        # Lógica de gestión de entrenamiento
+├── app/                      # Rutas y vistas principales
+│   ├── (drawer)/             # Layout con menú lateral
+│   ├── (tabs)/               # Navegación inferior (Home, Calendario)
+│   │   ├── calendar/         # Lógica de gestión de entrenamiento
 │   │   │   ├── _layout.tsx
 │   │   │   ├── gym.tsx
 │   │   │   ├── index.tsx
 │   │   │   ├── runner.tsx
 │   │   │   └── youtube.tsx
 │   │   ├── _layout.tsx
-│   │   └── index.tsx        # Pantalla de Bienvenida y acceso al plan
+│   │   └── index.tsx         # Pantalla de Bienvenida y acceso al plan
 │   ├── _layout.tsx
-│   ├── profile.tsx          # Configuración de usuario
-│   ├── _layout.tsx
-│   ├── login.tsx            # Pantalla de autenticación
-│   └── register.tsx         # Pantalla de registro
-├── components/              # Componentes UI reutilizables
-│   ├── forms/               # Formularios especializados (Gym, Runner, YT)
+│   ├── profile.tsx           # Configuración de usuario
+│   ├── login.tsx             # Pantalla de autenticación
+│   ├── register.tsx          # Pantalla de registro
+│   └── workout-details.tsx   # Detalle específico de un entrenamiento
+├── components/               # Componentes UI reutilizables
+│   ├── forms/                # Formularios especializados
 │   │   ├── GymForm.tsx
 │   │   ├── RunnerForm.tsx
 │   │   └── YouTubeForm.tsx
 │   ├── modals/
-│   │   ├── CustomModal.tsx  # Selector modal flotante
+│   │   ├── CustomModal.tsx   # Modal de éxito/error
 │   │   └── index.ts
+│   ├── workouts/             # Componentes de visualización de rutinas
+│   │   ├── GymDisplayCard.tsx
+│   │   └── RunnerDisplayCard.tsx
 │   ├── AccessibilityHeader.tsx
 │   ├── ExternalLink.tsx
 │   ├── FormHeader.tsx
@@ -57,23 +60,22 @@ src/
 │   └── YoutubeBrowserModal.tsx
 ├── config/
 │   └── firebase.ts           # Configuración de Firebase
-├── constants/                # i18n, estilos globales, temas y videos
+├── constants/                # i18n, estilos, temas y videos
 │   ├── i18n.ts
 │   ├── styles.ts
 │   ├── theme.ts
 │   └── videos.ts
-├── context/                  # Contextos globales (Language, Theme, Modal)
+├── context/                  # Contextos globales
 │   ├── LanguageContext.tsx
 │   ├── ModalContext.tsx
 │   └── ThemeContext.tsx
-├── hooks/                    # Hooks personalizados (useAppTheme, useTranslation)
+├── hooks/                    # Hooks personalizados
 │   ├── useAppTheme.ts
 │   └── useTranslation.ts
-├── services/
-├── utils/                    # Lógica de almacenamiento
+├── services/                 # Llamadas a APIs/Firebase
+├── utils/                    # Lógica de utilidad
 │   ├── authErrors.ts
 │   └── workoututils.ts
-
 ```
 
 ## ✨ Características Técnicas
@@ -102,8 +104,15 @@ El proyecto está construido sobre un stack moderno y escalable diseñado para d
 **Clonar el repositorio:**
 
 ```bash
-git clone https://github.com/leandrorechdev/need_to_train_final_version_utn.git
+https://github.com/leandrorechdev/need_to_train_main_version_final_utn_react_native.git
 ```
+
+
+## 🚀 DESCARGA LA APK PARA PROBARLA EN:
+```bash
+ https://expo.dev/accounts/learech/projects/NeedToTrain-expo/builds/b834c1e5-aabb-4237-8244-d625fdafc2d5
+```
+
 
 ## 🚀 Instalación y Ejecución
 
@@ -128,8 +137,8 @@ La aplicación sigue una línea estética marcada por el estilo **punk rock**, p
 
 - **Sistema de Temas:** Implementado a través de `ThemeContext`, permite cambiar instantáneamente entre modo claro y oscuro.
 - **Paleta de Colores (`constants/theme.ts`):**
-  - **Primarios:** `punkYellow` (`#E2B13C`) para llamadas a la acción.
-  - **Secundarios:** `punkRed` (`#E63946`) para alertas y acciones destructivas.
+    - **Primarios:** `punkYellow` (`#E2B13C`) para llamadas a la acción.
+    - **Secundarios:** `punkRed` (`#E63946`) para alertas y acciones destructivas.
 - **Jerarquía:** Uso intensivo de `fontWeight: '900'` y `letterSpacing` para una sensación de robustez.
 
 🚀 Próximos pasos
