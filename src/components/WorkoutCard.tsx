@@ -150,11 +150,11 @@ export default function WorkoutCard({
                             onPress={handleEdit}
                             style={styles.actionButton}
                         >
-                            <MaterialIcons
+                            {/* <MaterialIcons
                                 name="edit"
                                 size={20}
                                 color={colors.textMuted}
-                            />
+                            /> */}
                         </TouchableOpacity>
                     )}
                     <TouchableOpacity

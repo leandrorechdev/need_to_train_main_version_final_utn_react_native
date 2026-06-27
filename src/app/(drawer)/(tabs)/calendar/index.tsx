@@ -90,7 +90,9 @@ export default function CalendarMainScreen() {
             <ScrollView
                 style={localStyles.scroll}
                 showsVerticalScrollIndicator={false}
+                decelerationRate="fast"
                 contentContainerStyle={{ paddingBottom: 40 }}
+                scrollEventThrottle={16}
             >
                 {diasSemana.map((dia) => {// crea una dayCard por cada día de la semana
                     const entrenamientosDelDia = workouts.filter((w) => w.day === dia.key);// filtramos los ejercicios de cada día

@@ -4,22 +4,22 @@
     "slug": "NeedToTrain-expo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logo_main.png",
+    "icon": "./assets/images/logom.png",
     "scheme": "needtotrainexpo",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
     },
     "android": {
-      "package": "com.leandrorechdev.needtotrain", // Defino un ID único para Google Play
+      "package": "com.leandrorechdev.needtotrain",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/logo_dumbell_across_letters.png",
-        "backgroundImage": "./assets/images/logo_main.png",
-        "monochromeImage": "./assets/images/logo_dumbell_across_letters"
+        "foregroundImage": "./assets/images/logod.png",
+        "backgroundImage": "./assets/images/logom.png",
+        "monochromeImage": "./assets/images/logod.png"
       },
       "predictiveBackGestureEnabled": false,
-      "softwareKeyboardLayoutMode": "resize" // Esto asegura que el teclado no tape nuestro contenido
+      "softwareKeyboardLayoutMode": "resize"
     },
     "web": {
       "output": "static",
@@ -32,7 +32,7 @@
         {
           "backgroundColor": "#208AEF",
           "android": {
-            "image": "./assets/images/logo_dumbell_across_letters",
+            "image": "./assets/images/logod.png",
             "imageWidth": 76
           }
         }
@@ -44,6 +44,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ea9db6d2-7cd4-41fb-9b3d-26b96ea06fc3"
+      }
     }
   }
 }

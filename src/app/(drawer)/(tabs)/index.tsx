@@ -37,7 +37,7 @@ export default function HomeScreen() {
                 >
                     {/* --- AQUÍ INSERTAMOS EL LOGO --- */}
                     <Image
-                        source={require("@/assets/images/android-chrome-512x512.png")}
+                        source={require("@/assets/images/androidch.png")}
                         style={styles.logo}
                         contentFit="contain" // Asegura que no se deforme
                     />
